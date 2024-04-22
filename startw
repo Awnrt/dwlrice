@@ -1,0 +1,7 @@
+#!/bin/sh
+
+#/home/awy/dwl-startup &
+
+wlr-randr --output DP-2 --mode 2560x1440@165Hz
+wlr-randr --output DP-3 --mode 2560x1440@239.998001Hz
+
