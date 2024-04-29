@@ -22,3 +22,4 @@ grim
 mpv
 qt6-base
 qt6-wayland
+unzip
