@@ -46,3 +46,5 @@ sudo -u $PERMUSER cp $WORKDIRECTORY/config/config.fish /home/$PERMUSER/.config/f
 sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.config/foot
 sudo -u $PERMUSER cp $WORKDIRECTORY/config/foot.ini /home/$PERMUSER/.config/foot/
 
+sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/papes
+sudo -u $PERMUSER cp $WORKDIRECTORY/papes/thiemeyer_road_to_samarkand.jpg /home/$PERMUSER/.local/share/papes
