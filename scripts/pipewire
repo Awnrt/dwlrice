@@ -1,7 +1,8 @@
 #!/bin/sh
 
-#killall pipewire
-#killall wireplumber
-pipewire &
-pipewire-pulse &
-wireplumber &
+if ! pgrep -u "$USER" -x pipewire-pulse > /dev/null 2>&1; then
+  pipewire &
+  pipewire-pulse &
+  wireplumber &
+fi
+
