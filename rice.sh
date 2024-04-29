@@ -41,6 +41,6 @@ echo "[ -x /usr/bin/fish ] && SHELL=/usr/bin/fish exec fish" >> /home/$PERMUSER/
 
 sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.config/fish
 sudo -u $PERMUSER cp $WORKDIRECTORY/config/config.fish /home/$PERMUSER/.config/fish/
-
-
+sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.config/foot
+sudo -u $PERMUSER cp $WORKDIRECTORY/config/foot.ini /home/$PERMUSER/.config/foot/
 

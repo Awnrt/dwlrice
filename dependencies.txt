@@ -6,3 +6,4 @@ foot
 tllist
 fish
 ttf-jetbrains-mono-nerd
+bemenu-wayland
