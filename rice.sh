@@ -37,6 +37,8 @@ pacman -S seatd-dinit --noconfirm
 dinitctl enable seatd
 usermod -aG seat $PERMUSER
 
+dinitctl enable dbus
+
 echo "[ -x /usr/bin/fish ] && SHELL=/usr/bin/fish exec fish" >> /home/$PERMUSER/.bashrc
 
 sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.config/fish

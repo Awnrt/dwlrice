@@ -10,3 +10,4 @@ bemenu-wayland
 pipewire-jack
 librewolf
 wlr-randr
+pipewire-pulse-dinit
