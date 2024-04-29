@@ -64,3 +64,19 @@ cd wbg
 sudo -u $PERMUSER meson --buildtype=release build
 sudo -u $PERMUSER ninja -C build
 ninja -C build install
+
+sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/themes
+sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/icons
+cd /home/$PERMUSER/.local/share/themes
+sudo -u $PERMUSER curl -L "https://github.com/dracula/gtk/archive/master.zip" -o Dracula.zip
+sudo -u $PERMUSER unzip Dracula.zip
+rm Dracula.zip
+
+cd /home/$PERMUSER/.local/share/icons
+sudo -u $PERMUSER curl -L "https://github.com/dracula/gtk/files/5214870/Dracula.zip" -o Dracula.zip
+sudo -u $PERMUSER unzip Dracula.zip
+rm Dracula.zip
+
+gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
+gsettings set org.gnome.desktop.interface icon-theme "Dracula"
