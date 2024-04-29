@@ -2,7 +2,7 @@ WORKDIRECTORY=$PWD
 PERMUSER="awy"
 
 sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/bin/
-sudo -u $PERMUSER cp -r $PWD/scripts /home/$USER/.local/bin 
+sudo -u $PERMUSER cp -r $PWD/scripts /home/$PERMUSER/.local/bin 
 
 pacman -Sy --noconfirm
 pacman -S artix-archlinux-support --noconfirm
