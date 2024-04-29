@@ -19,3 +19,5 @@ noto-fonts-emoji
 imv
 grim
 mpv
+qt6-base
+qt6-wayland
