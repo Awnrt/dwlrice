@@ -9,3 +9,4 @@ ttf-jetbrains-mono-nerd
 bemenu-wayland
 pipewire-jack
 librewolf
+wlr-randr
