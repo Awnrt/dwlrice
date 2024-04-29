@@ -7,3 +7,5 @@ tllist
 fish
 ttf-jetbrains-mono-nerd
 bemenu-wayland
+pipewire-jack
+librewolf
