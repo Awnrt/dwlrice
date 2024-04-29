@@ -18,3 +18,4 @@ meson
 noto-fonts-emoji
 imv
 grim
+mpv
