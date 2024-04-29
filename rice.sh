@@ -2,7 +2,7 @@ WORKDIRECTORY=$PWD
 PERMUSER="awy"
 
 sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/bin/
-sudo -u $PERMUSER cp -r $PWD/scripts /home/$PERMUSER/.local/bin 
+sudo -u $PERMUSER cp -r $WORKDIRECTORY/scripts /home/$PERMUSER/.local/bin 
 
 pacman -Sy --noconfirm
 pacman -S artix-archlinux-support --noconfirm
@@ -40,7 +40,7 @@ usermod -aG seat $PERMUSER
 echo "[ -x /usr/bin/fish ] && SHELL=/usr/bin/fish exec fish" >> /home/$PERMUSER/.bashrc
 
 sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.config/fish
-sudo -u $PERMUSER cp $PWD/config/config.fish /home/$PERMUSER/.config/fish/
+sudo -u $PERMUSER cp $WORKDIRECTORY/config/config.fish /home/$PERMUSER/.config/fish/
 
 
 
