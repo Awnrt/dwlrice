@@ -19,12 +19,18 @@ export WLR_NO_HARDWARE_CURSORS=1
 
 #export XCURSOR_SIZE=24
 
-someblocks -p | dwlb -status-stdin all &
-gentoo-pipewire-launcher &
+
+
 #dwlb -font "JetBrainsMonoNerdFontMono:size=12"
 #foot --server <&-
 #dwl
+someblocks -p | dwlb -status-stdin all &
 exec dbus-launch --exit-with-session dwl -s 'dwlb -font "JetBrainsMonoNerdFontMono:size=10"'
 
+#dwl
+#exec dbus-launch --exit-with-session slstatus -s | dwl
+#dbus-launch --exit-with-session dwl
+
+#dbus-launch --exit-with-session dwl
 #wlr-randr --output DP-2 --mode 2560x1440@165Hz
 #wlr-randr --output DP-3 --mode 2560x1440@239.998001Hz

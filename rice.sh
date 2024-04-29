@@ -1,2 +1,8 @@
-echo "[ -x /usr/bin/fish ] && SHELL=/usr/bin/fish exec fish" >> /home/awy/.bashrc
-[ "$(tty)" = "/dev/tty1" ] && ! pidof -s dwl >/dev/null 2>&1 && exec "dwl-startup"
+WORKDIRECTORY = $PWD
+PERMUSER = $USER
+mkdir -p /home/$USER/.local/bin/
+cp -r $PWD/scripts /home/$USER/.local/bin 
+
+DEPLIST="`sed -e 's/#.*$//' -e '/^$/d' dependencies.txt | tr '\n' ' '`"
+sudo pacman -Sy
+sudo pacman -S $DEPLIST --noconfirm
