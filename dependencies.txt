@@ -13,3 +13,5 @@ wlr-randr
 pipewire-pulse-dinit
 pipewire-pulse
 doas
+ninja
+meson
