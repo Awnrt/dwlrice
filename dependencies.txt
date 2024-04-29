@@ -12,6 +12,7 @@ librewolf
 wlr-randr
 pipewire-pulse-dinit
 pipewire-pulse
+pipewire-alsa
 doas
 ninja
 meson
