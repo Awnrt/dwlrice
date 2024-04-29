@@ -48,3 +48,14 @@ sudo -u $PERMUSER cp $WORKDIRECTORY/config/foot.ini /home/$PERMUSER/.config/foot
 
 sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/papes
 sudo -u $PERMUSER cp $WORKDIRECTORY/papes/thiemeyer_road_to_samarkand.jpg /home/$PERMUSER/.local/share/papes
+
+echo "permit nopass :wheel" >> /etc/doas.conf
+echo "permit nopass keepenv :$PERMUSER" >> /etc/doas.conf
+echo "permit nopass keepenv :root" >> /etc/doas.conf
+
+cd /home/$PERMUSER
+sudo -u $PERMUSER git clone https://codeberg.org/dnkl/wbg
+cd wbg
+sudo -u $PERMUSER meson --buildtype=release build
+sudo -u $PERMUSER ninja -C build
+ninja -C build install

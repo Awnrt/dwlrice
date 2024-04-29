@@ -11,3 +11,5 @@ pipewire-jack
 librewolf
 wlr-randr
 pipewire-pulse-dinit
+pipewire-pulse
+doas
