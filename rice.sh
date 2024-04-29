@@ -31,6 +31,9 @@ cd someblocks
 make clean install
 cd ..
 
+
+pacman -Rdd elogind-dinit --noconfirm
+pacman -S seatd-dinit --noconfirm
 dinitctl enable seatd
 usermod -aG seat $PERMUSER
 

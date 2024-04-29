@@ -3,7 +3,6 @@ wlroots
 wayland-protocols
 neovim
 wl-clipboard
-seatd-dinit
 foot
 tllist
 fish
