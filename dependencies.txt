@@ -5,3 +5,4 @@ wl-clipboard
 foot
 tllist
 fish
+ttf-jetbrains-mono-nerd
