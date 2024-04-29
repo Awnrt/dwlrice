@@ -1,6 +1,11 @@
 WORKDIRECTORY=$PWD
 PERMUSER="awy"
 
+if [ "$EUID" -ne 0 ]
+  then printf "The script has to be run as root.\n"
+  exit
+fi
+
 sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/bin/
 sudo -u $PERMUSER cp -r $WORKDIRECTORY/scripts /home/$PERMUSER/.local/bin 
 
