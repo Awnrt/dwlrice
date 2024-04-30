@@ -1,8 +1,0 @@
-#!/bin/sh
-
-if ! pgrep -u "$USER" -x pipewire-pulse > /dev/null 2>&1; then
-  pipewire &
-  pipewire-pulse &
-  wireplumber &
-fi
-
