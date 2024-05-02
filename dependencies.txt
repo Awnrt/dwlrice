@@ -25,3 +25,5 @@ qt6-wayland
 unzip
 yt-dlp
 xdg-desktop-portal-wlr
+libxcb
+xorg-xwayland
