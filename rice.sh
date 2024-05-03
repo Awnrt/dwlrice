@@ -14,7 +14,7 @@ pacman -S artix-archlinux-support --noconfirm
 echo "[extra]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 
-cp /usr/include/pixman-1/* /usr/include/
+#cp /usr/include/pixman-1/* /usr/include/
 
 DEPLIST="`sed -e 's/#.*$//' -e '/^$/d' dependencies.txt | tr '\n' ' '`"
 pacman -Sy --noconfirm
