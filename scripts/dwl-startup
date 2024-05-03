@@ -21,6 +21,24 @@ export CLUTTER_BACKEND=wayland
 #FOR VM TESTING ONLY vvv
 #export WLR_RENDERER_ALLOW_SOFTWARE=1
 
+export BEMENU_OPTS="
+    --ignorecase\
+    --prompt ''\
+    --fn 'Terminus 10'\
+    --ch '20'\
+    --center\
+    --width-factor '0.25'\
+    --list '14'\
+    --line-height '26'\
+    --fixed-height\
+    --border '2'\
+    --bdr '#ebdbb2'\
+    --hb '#504945' --hf '#ebdbb2'\
+    --nb '#282828' --nf '#d5c4a1'\
+    --ab '#282828' --af '#d5c4a1'\
+    --fb '#282828' --ff '#d5c4a1'\
+"
+
 someblocks -p | dwlb -status-stdin all &
-exec dbus-launch --exit-with-session dwl -s 'dwlb -font "JetBrainsMonoNerdFontMono:size=10"'
+exec dbus-launch --exit-with-session dwl -s 'dwlb'
 
