@@ -23,14 +23,19 @@ pacman -S $DEPLIST --noconfirm
 cd /home/$PERMUSER
 
 sudo -u $PERMUSER git clone https://github.com/awnrt/dwl
-sudo -u $PERMUSER git clone https://github.com/awnrt/dwlb
+#sudo -u $PERMUSER git clone https://github.com/awnrt/dwlb
+sudo -u $PERMUSER git clone https://github.com/awnrt/somebar
 sudo -u $PERMUSER git clone https://github.com/awnrt/someblocks
 
 cd dwl
 make clean install
 cd ..
-cd dwlb
-make clean install
+#cd dwlb
+#make clean install
+cd somebar
+sudo -u $PERMUSER meson setup build
+sudo -u $PERMUSER ninja -C build
+ninja -C build install
 cd ..
 cd someblocks
 make clean install
@@ -59,11 +64,11 @@ echo "permit nopass keepenv :$PERMUSER" >> /etc/doas.conf
 echo "permit nopass keepenv :root" >> /etc/doas.conf
 
 cd /home/$PERMUSER
-sudo -u $PERMUSER git clone https://codeberg.org/dnkl/wbg
-cd wbg
-sudo -u $PERMUSER meson --buildtype=release build
-sudo -u $PERMUSER ninja -C build
-ninja -C build install
+#sudo -u $PERMUSER git clone https://codeberg.org/dnkl/wbg
+#cd wbg
+#sudo -u $PERMUSER meson --buildtype=release build
+#sudo -u $PERMUSER ninja -C build
+#ninja -C build install
 
 #sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/themes
 #sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/icons

@@ -27,4 +27,4 @@ yt-dlp
 xdg-desktop-portal-wlr
 libxcb
 xorg-xwayland
-terminus-font
+swaybg
