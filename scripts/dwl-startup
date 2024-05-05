@@ -21,6 +21,7 @@ export CLUTTER_BACKEND=wayland
 #FOR VM TESTING ONLY vvv
 #export WLR_RENDERER_ALLOW_SOFTWARE=1
 export EDITOR=nvim
+export GTK_THEME='catppuccin'
 
 export BEMENU_OPTS="
     --ignorecase\
