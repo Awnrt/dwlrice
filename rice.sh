@@ -33,6 +33,7 @@ cd ..
 #cd dwlb
 #make clean install
 cd somebar
+sudo -u $PERMUSER cp src/config.def.hpp src/config.hpp
 sudo -u $PERMUSER meson setup build
 sudo -u $PERMUSER ninja -C build
 ninja -C build install
@@ -71,7 +72,9 @@ cd /home/$PERMUSER/.local/share/themes
 sudo -u $PERMUSER curl -L "https://github.com/catppuccin/gtk/releases/download/v0.7.4/Catppuccin-Mocha-Standard-Lavender-Dark.zip" -o catppuccin.zip
 sudo -u $PERMUSER unzip catppuccin.zip
 rm catppuccin.zip
-
+mv Catppuccin-Mocha-Standard-Lavender-Dark catppuccin
+rm Catppuccin-Mocha-Standard-Lavender-Dark-hdpi -rf
+rm Catppuccin-Mocha-Standard-Lavender-Dark-xhdpi -rf
 #cd /home/$PERMUSER/.local/share/icons
 #sudo -u $PERMUSER curl -L "https://github.com/dracula/gtk/files/5214870/Dracula.zip" -o Dracula.zip
 #sudo -u $PERMUSER unzip Dracula.zip
