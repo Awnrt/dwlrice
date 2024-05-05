@@ -1,0 +1,2 @@
+fish_config prompt save arrow
+set -U fish_greeting
