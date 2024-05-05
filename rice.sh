@@ -57,25 +57,20 @@ sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.config/foot
 sudo -u $PERMUSER cp $WORKDIRECTORY/config/foot.ini /home/$PERMUSER/.config/foot/
 
 sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/papes
-sudo -u $PERMUSER cp $WORKDIRECTORY/papes/thiemeyer_road_to_samarkand.jpg /home/$PERMUSER/.local/share/papes
+sudo -u $PERMUSER cp $WORKDIRECTORY/papes/* /home/$PERMUSER/.local/share/papes
 
 echo "permit nopass :wheel" >> /etc/doas.conf
 echo "permit nopass keepenv :$PERMUSER" >> /etc/doas.conf
 echo "permit nopass keepenv :root" >> /etc/doas.conf
 
 cd /home/$PERMUSER
-#sudo -u $PERMUSER git clone https://codeberg.org/dnkl/wbg
-#cd wbg
-#sudo -u $PERMUSER meson --buildtype=release build
-#sudo -u $PERMUSER ninja -C build
-#ninja -C build install
 
-#sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/themes
+sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/themes
 #sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.local/share/icons
-#cd /home/$PERMUSER/.local/share/themes
-#sudo -u $PERMUSER curl -L "https://github.com/dracula/gtk/archive/master.zip" -o Dracula.zip
-#sudo -u $PERMUSER unzip Dracula.zip
-#rm Dracula.zip
+cd /home/$PERMUSER/.local/share/themes
+sudo -u $PERMUSER curl -L "https://github.com/catppuccin/gtk/releases/download/v0.7.4/Catppuccin-Mocha-Standard-Lavender-Dark.zip" -o catppuccin.zip
+sudo -u $PERMUSER unzip catppuccin.zip
+rm catppuccin.zip
 
 #cd /home/$PERMUSER/.local/share/icons
 #sudo -u $PERMUSER curl -L "https://github.com/dracula/gtk/files/5214870/Dracula.zip" -o Dracula.zip
