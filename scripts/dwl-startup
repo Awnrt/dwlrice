@@ -40,6 +40,5 @@ export BEMENU_OPTS="
     --fb '#1a1b26' --ff '#a9b1d6'\
 "
 
-someblocks & 
-exec dbus-launch --exit-with-session dwl -s 'somebar'
+exec dbus-launch --exit-with-session dwl -s 'someblocks & somebar'
 
