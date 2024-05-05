@@ -75,7 +75,7 @@ sudo -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.interface gtk-them
 sudo -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu'
 
 cd $WORKDIRECTORY
-sudo -u $PERMUSER yes | fish firice
+su - $PERMUSER -c "yes | fish $WORKDIRECTORY/firice"
 echo "[ -x /usr/bin/fish ] && SHELL=/usr/bin/fish exec fish" >> /home/$PERMUSER/.bashrc
 
 sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.config/fish
