@@ -50,10 +50,6 @@ usermod -aG seat $PERMUSER
 
 dinitctl enable dbus
 
-echo "[ -x /usr/bin/fish ] && SHELL=/usr/bin/fish exec fish" >> /home/$PERMUSER/.bashrc
-
-sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.config/fish
-sudo -u $PERMUSER cp $WORKDIRECTORY/config/config.fish /home/$PERMUSER/.config/fish/
 sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.config/foot
 sudo -u $PERMUSER cp $WORKDIRECTORY/config/foot.ini /home/$PERMUSER/.config/foot/
 
@@ -79,7 +75,12 @@ sudo -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.interface gtk-them
 sudo -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu'
 
 cd $WORKDIRECTORY
-sudo -u $PERMUSER yes | fish firice 
+sudo -u $PERMUSER yes | fish firice
+echo "[ -x /usr/bin/fish ] && SHELL=/usr/bin/fish exec fish" >> /home/$PERMUSER/.bashrc
+
+sudo -u $PERMUSER mkdir -p /home/$PERMUSER/.config/fish
+sudo -u $PERMUSER cp -f $WORKDIRECTORY/config/config.fish /home/$PERMUSER/.config/fish/
+
 cd ..
 rm -rf dwl
 rm -rf somebar
