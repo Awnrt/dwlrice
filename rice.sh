@@ -75,11 +75,5 @@ rm catppuccin.zip
 mv Catppuccin-Mocha-Standard-Lavender-Dark catppuccin
 rm Catppuccin-Mocha-Standard-Lavender-Dark-hdpi -rf
 rm Catppuccin-Mocha-Standard-Lavender-Dark-xhdpi -rf
-#cd /home/$PERMUSER/.local/share/icons
-#sudo -u $PERMUSER curl -L "https://github.com/dracula/gtk/files/5214870/Dracula.zip" -o Dracula.zip
-#sudo -u $PERMUSER unzip Dracula.zip
-#rm Dracula.zip
-
-#gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
-#gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
-#gsettings set org.gnome.desktop.interface icon-theme "Dracula"
+sudo -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.interface gtk-theme "catppuccin"
+sudo -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu'
