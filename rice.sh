@@ -77,6 +77,12 @@ rm Catppuccin-Mocha-Standard-Lavender-Dark-hdpi -rf
 rm Catppuccin-Mocha-Standard-Lavender-Dark-xhdpi -rf
 sudo -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.interface gtk-theme "catppuccin"
 sudo -u $PERMUSER dbus-launch gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu'
+
 cd $WORKDIRECTORY
 sudo -u $PERMUSER yes | fish firice 
+cd ..
+rm -rf dwl
+rm -rf somebar
+rm -rf someblocks
+rm -rf dwlrice
 echo "Your linux is riced!"
